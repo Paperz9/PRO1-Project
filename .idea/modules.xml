@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/L01 - JavaIntro/L01 - JavaIntro.iml" filepath="$PROJECT_DIR$/L01 - JavaIntro/L01 - JavaIntro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L02 - Shapes/L02 - Shapes.iml" filepath="$PROJECT_DIR$/L02 - Shapes/L02 - Shapes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L04 - Objekter_og_klasser/L04 - Objekter_og_klasser.iml" filepath="$PROJECT_DIR$/L04 - Objekter_og_klasser/L04 - Objekter_og_klasser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L05 - Typer/L05 - Typer.iml" filepath="$PROJECT_DIR$/L05 - Typer/L05 - Typer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L06 - if-else og scanner/L06 - if-else og scanner.iml" filepath="$PROJECT_DIR$/L06 - if-else og scanner/L06 - if-else og scanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L07 - Opsamling/L07 - Opsamling.iml" filepath="$PROJECT_DIR$/L07 - Opsamling/L07 - Opsamling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L08 - While loops/L08 - While loops.iml" filepath="$PROJECT_DIR$/L08 - While loops/L08 - While loops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L09 - For loop/L09 - For loop.iml" filepath="$PROJECT_DIR$/L09 - For loop/L09 - For loop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L10 - Projekt -1 Dice Games/L10 - Projekt -1 Dice Games.iml" filepath="$PROJECT_DIR$/L10 - Projekt -1 Dice Games/L10 - Projekt -1 Dice Games.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L12 - Arrays/L12 - Arrays.iml" filepath="$PROJECT_DIR$/L12 - Arrays/L12 - Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L13 - Arrays med 2-dim/L13 - Arrays med 2-dim.iml" filepath="$PROJECT_DIR$/L13 - Arrays med 2-dim/L13 - Arrays med 2-dim.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L14 - ArrayList/L14 - ArrayList.iml" filepath="$PROJECT_DIR$/L14 - ArrayList/L14 - ArrayList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L15 - GUI 1/L15 - GUI 1.iml" filepath="$PROJECT_DIR$/L15 - GUI 1/L15 - GUI 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L16 - GUI 2/L16 - GUI 2.iml" filepath="$PROJECT_DIR$/L16 - GUI 2/L16 - GUI 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L17 - Specifikationer/L17 - Specifikationer.iml" filepath="$PROJECT_DIR$/L17 - Specifikationer/L17 - Specifikationer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L18 - Yatzy/L18 - Yatzy.iml" filepath="$PROJECT_DIR$/L18 - Yatzy/L18 - Yatzy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L20 - Forbindelser 1/L20 - Forbindelser 1.iml" filepath="$PROJECT_DIR$/L20 - Forbindelser 1/L20 - Forbindelser 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L21 - Forbindelser 2/L21 - Forbindelser 2.iml" filepath="$PROJECT_DIR$/L21 - Forbindelser 2/L21 - Forbindelser 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L22 - Arkitektur/L22 - Arkitektur.iml" filepath="$PROJECT_DIR$/L22 - Arkitektur/L22 - Arkitektur.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L23 - Netcafe/L23 - Netcafe.iml" filepath="$PROJECT_DIR$/L23 - Netcafe/L23 - Netcafe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L23 - Opsamling/L23 - Opsamling.iml" filepath="$PROJECT_DIR$/L23 - Opsamling/L23 - Opsamling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L23 - Semesteropgave 2019/L23 - Semesteropgave 2019.iml" filepath="$PROJECT_DIR$/L23 - Semesteropgave 2019/L23 - Semesteropgave 2019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L04 - Objekter_og_klasser/PRO1-Project.iml" filepath="$PROJECT_DIR$/L04 - Objekter_og_klasser/PRO1-Project.iml" />
+    </modules>
+  </component>
+</project>
