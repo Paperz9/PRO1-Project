@@ -26,4 +26,12 @@ public class Order {
         orderLines.add(line);
         return line;
     }
+
+    public double orderPrice() {
+        double totalPrice = 0;
+        for (OrderLine e : orderLines) {
+            totalPrice += e.orderLinePrice();
+        }
+        return totalPrice;
+    }
 }

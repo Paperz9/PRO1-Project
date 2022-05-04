@@ -24,4 +24,9 @@ public class OrderLine {
     public Product getProduct() {
         return product;
     }
+
+    public double orderLinePrice() {
+        double totalPrice = count * product.getUnitPrice();
+        return totalPrice;
+    }
 }
