@@ -35,7 +35,7 @@ public class Event {
         reservations.remove(reservation);
     }
 
-    public int totalReservedSeats(ArrayList<Reservation> reservations) {
+    public int totalReservedSeats() {
         int reservedSeats = 0;
         for (Reservation e : reservations) {
             reservedSeats += e.getSeats().size();

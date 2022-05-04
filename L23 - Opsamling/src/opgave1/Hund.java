@@ -1,10 +1,10 @@
 package opgave1;
 
 public class Hund {
-    private String navn;
-    private boolean stamtavle;
-    private int pris;
-    private Race race;
+    private final String navn;
+    private final boolean stamtavle;
+    private final int pris;
+    private final Race race;
 
     public Hund(String navn, boolean stamtavle, int pris, Race race) {
         this.navn = navn;

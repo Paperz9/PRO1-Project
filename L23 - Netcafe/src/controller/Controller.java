@@ -102,6 +102,10 @@ public class Controller {
         event.removeReservation(reservation);
     }
 
+    public static int getTotalReservedSeats(Event event) {
+        return event.totalReservedSeats();
+    }
+
     public static void initStorage() {
         Seat nr1 = Controller.createSeat(1, Section.Tournament);
         Seat nr2 = Controller.createSeat(2, Section.Tournament);
