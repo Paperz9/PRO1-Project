@@ -19,8 +19,8 @@ public class Forestilling {
         return new ArrayList<>(orders);
     }
 
-    public Order createOrder(LocalDate dato) {
-        Order order = new Order(dato);
+    public Order createOrder(LocalDate dato, Kunde kunde) {
+        Order order = new Order(dato, kunde);
         orders.add(order);
         return order;
     }

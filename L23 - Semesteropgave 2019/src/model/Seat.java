@@ -5,10 +5,11 @@ public class Seat {
     private int number;
     private int price;
 
-    public Seat(int row, int number, int price) {
+    public Seat(int row, int number, int price, Order order) {
         this.row = row;
         this.number = number;
         this.price = price;
+        order.addSeat(this);
     }
 
     public int getRow() {
