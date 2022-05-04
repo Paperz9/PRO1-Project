@@ -117,15 +117,23 @@ public class Controller {
         Event event1 = Controller.createEvent("Dota 2 tournament", true);
         Event event2 = Controller.createEvent("CS GO tournament", false);
 
-        Reservation res1 = Controller.createReservation(LocalDateTime.of(2019,8,12,20,0), LocalDateTime.of(2019,8,12,23,0));
+        Reservation res1 = Controller.createReservation(
+                LocalDateTime.of(2019,8,12,20,0),
+                LocalDateTime.of(2019,8,12,23,0));
         Controller.addSeatToReservation(nr1, res1);
         Controller.addSeatToReservation(nr2, res1);
 
-        Reservation res2 = Controller.createReservation(LocalDateTime.of(2019,8,13,19,0), LocalDateTime.of(2019,8,14,6,0));
+        Reservation res2 = Controller.createReservation(
+                LocalDateTime.of(2019,8,13,19,0),
+                LocalDateTime.of(2019,8,14,6,0));
         Controller.addSeatToReservation(nr3, res2);
         Controller.addSeatToReservation(nr4, res2);
 
-        Reservation res3 = Controller.createReservation(LocalDateTime.of(2019,8,14,19,0), LocalDateTime.of(2019,8,15,6,0));
+        Reservation res3 = Controller.createReservation(
+                LocalDateTime.of(2019,8,14,19,0),
+                LocalDateTime.of(2019,8,15,6,0));
         Controller.addSeatToReservation(nr6, res3);
+
+        Controller.addReservationToEvent(res1, event1);
     }
 }
