@@ -7,6 +7,7 @@ import java.util.List;
 public class Customer {
     private String name;
     private final LocalDate birthday;
+    private Discount discount;
 
     // association 1 --> 0..* Order
     private final ArrayList<Order> orders = new ArrayList<>();
@@ -49,4 +50,9 @@ public class Customer {
         }
         return totalBuyPrice;
     }
+
+//    public double totalBuyWithDiscount() {
+//        if (discount != null)
+//
+//    }
 }

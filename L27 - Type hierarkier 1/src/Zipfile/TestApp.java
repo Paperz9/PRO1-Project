@@ -6,11 +6,11 @@ public class TestApp {
     public static void main(String[] args) {
 
         // Products
-        Product p1 = new Product(1, "Barbie", 50);
-        Product p2 = new Product(2, "Ken", 40);
-        Product p3 = new Product(3, "Beyblade", 75);
-        Product p4 = new Product(4, "Lego", 150);
-        Product p5 = new Product(5, "LoL", 500);
+        Product p1 = new Product(1, "Barbie", 50.0);
+        Product p2 = new Product(2, "Ken", 40.0);
+        Product p3 = new Product(3, "Beyblade", 75.0);
+        Product p4 = new Product(4, "Lego", 150.0);
+        Product p5 = new Product(5, "LoL", 500.0);
 
         // Orders
         Order o1 = new Order(1);
