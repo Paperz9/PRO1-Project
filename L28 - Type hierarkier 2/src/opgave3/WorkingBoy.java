@@ -8,6 +8,6 @@ public class WorkingBoy extends Employee {
 
     @Override
     public double getWeeklySalary() {
-        return super.getHourlySalary() * 27;
+        return this.getHourlySalary() * 25;
     }
 }
