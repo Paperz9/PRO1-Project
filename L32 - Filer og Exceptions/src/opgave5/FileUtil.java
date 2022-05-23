@@ -59,8 +59,6 @@ public class FileUtil {
                 sum += d;
                 count++;
             }
-        } catch (IOException e) {
-            throw new IOException("File not found!");
         }
         return sum / count;
     }
