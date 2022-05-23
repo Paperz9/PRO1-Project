@@ -1,4 +1,4 @@
-package opg5;
+package opgave5;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -10,7 +10,7 @@ public class NumberFileGenerator {
 
 	public static void main(String[] args) {
 		int antal = 0;
-		String filename = "L32 Files - Exceptions/src/opg5/";
+		String filename = "L32 - Filer og Exceptions/src/opgave5/";
 		try (Scanner scanner = new Scanner(System.in)) {
 			while (antal <= 0) {
 				try {

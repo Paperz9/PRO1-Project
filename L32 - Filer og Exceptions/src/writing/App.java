@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class App {
 
 	public static void main(String[] args) {
-		File out = new File("L32 Files and Exceptions/src/writing/Output.txt");
+		File out = new File("L32 - Filer og Exceptions/src/writing/Output.txt");
 
 		try (Scanner scanner = new Scanner(System.in);
 				PrintWriter writer = new PrintWriter(out)) {

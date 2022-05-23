@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class NumbersApp1 {
 
 	public static void main(String[] args) {
-		File in = new File("L32 Files - Exceptions/src/readnumbers/Numbers.txt");
+		File in = new File("L32 - Filer og Exceptions/src/readnumbers/Numbers.txt");
 		try (Scanner scanner = new Scanner(in)) {
 			double sum = 0;
 			while (scanner.hasNextLine()) {
