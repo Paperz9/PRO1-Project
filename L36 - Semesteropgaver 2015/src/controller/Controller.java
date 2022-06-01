@@ -1,0 +1,77 @@
+package controller;
+
+import model.*;
+import storage.Storage;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+
+
+// S6 (7 p)
+public abstract class Controller {
+
+    public static Kamp opretKamp(String sted, LocalDate dato, LocalTime tid) {
+        Kamp kamp = new Kamp(sted, dato, tid);
+        Storage.storeKamp(kamp);
+        return kamp;
+    }
+
+    public static Deltagelse opretDeltagelse(Spiller spiller, Kamp kamp, boolean afbud, String begrundelse) {
+        Deltagelse deltagelse = kamp.opretDeltagelse(afbud,begrundelse);
+        deltagelse.setSpiller(spiller);
+        return deltagelse;
+    }
+
+    public static Spiller opretSpiller(String navn, int aargang) {
+        Spiller spiller = new Spiller(navn, aargang);
+        Storage.storeSpiller(spiller);
+        return spiller;
+    }
+
+    public static ProfSpiller opretProfSpiller(String navn, int aargang, double kampHonorar) {
+        ProfSpiller profSpiller = new ProfSpiller(navn, aargang, kampHonorar);
+        Storage.storeSpiller(profSpiller);
+        return profSpiller;
+    }
+
+    // S7 (5 p)
+
+    /**
+     * Opdaterer sammenhængen mellem spiller og deltagelse så de
+     * linker til hinanden
+     * Precondition: spiller != null og deltagelse != null
+     */
+    public static void updateSpillerDeltagelse(Spiller spiller, Deltagelse deltagelse) {
+
+    }
+
+    //---------------------------------------------------------------------------------------
+
+    public static void initStorage() {
+        Kamp kamp1 = opretKamp("Herning",
+                LocalDate.of(2015,1,26),
+                LocalTime.of(10,30));
+
+        Kamp kamp2 = opretKamp("Ikast",
+                LocalDate.of(2015,1,27),
+                LocalTime.of(13,30));
+
+        Spiller s1 = opretSpiller("Jane Jensen",1999);
+        Spiller s2 = opretSpiller("Lene Hansen",2000);
+        Spiller s3 = opretSpiller("Mette Petersen", 1999);
+        ProfSpiller ps1 = opretProfSpiller("Sofia Kjeldsen",1999,50);
+        ProfSpiller ps2 = opretProfSpiller("Maria Nielsen", 2000,55);
+
+        opretDeltagelse(s1,kamp1,true,"Moster Oda har fødselsdag");
+        opretDeltagelse(s1,kamp2,false,"");
+        opretDeltagelse(s2,kamp1,false,"");
+        opretDeltagelse(s2,kamp2,false,"");
+        opretDeltagelse(s3,kamp1,false,"");
+        opretDeltagelse(s3,kamp2,false,"");
+        opretDeltagelse(ps1,kamp2,true,"Dårlig form");
+        opretDeltagelse(ps1,kamp1,false,"");
+        opretDeltagelse(ps2,kamp1,false,"");
+        opretDeltagelse(ps2,kamp2,false,"");
+    }
+}
