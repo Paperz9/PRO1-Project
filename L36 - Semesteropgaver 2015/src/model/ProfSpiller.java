@@ -8,6 +8,11 @@ public class ProfSpiller extends Spiller {
         this.kampHonorar = kampHonorar;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + " " + kampHonorar;
+    }
+
     // S3 (6 p)
     public double getKampHonorar() {
         double antalAfbud = 0;

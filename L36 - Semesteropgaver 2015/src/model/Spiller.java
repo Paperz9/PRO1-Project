@@ -6,8 +6,8 @@ public class Spiller {
     private String navn;
     private int aargang;
 
-    // associering 1 --> 0..* Deltagelse
-    final ArrayList<Deltagelse> deltagelse = new ArrayList<>(); // OBS: package visible
+    // associering --> 0..* Deltagelse
+    final ArrayList<Deltagelse> deltagelser = new ArrayList<>(); // OBS: package visible
 
     public Spiller(String navn, int aargang) {
         this.navn = navn;
@@ -22,10 +22,15 @@ public class Spiller {
         return aargang;
     }
 
+    @Override
+    public String toString() {
+        return navn + " " + aargang;
+    }
+
     //--------------------------------------------------------------------------
 
     public ArrayList<Deltagelse> getDeltagelse() {
-        return new ArrayList<>(deltagelse);
+        return new ArrayList<>(deltagelser);
     }
 
     //--------------------------------------------------------------------------

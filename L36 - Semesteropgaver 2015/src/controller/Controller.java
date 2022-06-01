@@ -43,7 +43,38 @@ public abstract class Controller {
      * Precondition: spiller != null og deltagelse != null
      */
     public static void updateSpillerDeltagelse(Spiller spiller, Deltagelse deltagelse) {
+        var oldDeltagelse = spiller.getDeltagelse();
+        if (oldDeltagelse != null) {
+            deltagelse.removeSpiller();
+        }
+        deltagelse.setSpiller(spiller);
+    }
 
+    // S9 (10 p)
+    public static ArrayList<Kamp> alleKampe(ArrayList<Kamp> list1, ArrayList<Kamp> list2) {
+        ArrayList<Kamp> result = new ArrayList<>();
+
+        int i1 = 0;
+        int i2 = 0;
+        while (i1 < list1.size() && i2 < list2.size()) {
+            if (list1.get(i1).compareTo(list2.get(i2)) < 0) {
+                result.add(list1.get(i1));
+                i1++;
+            }
+            else {
+                result.add(list2.get(i2));
+                i2++;
+            }
+        }
+        while (i1 < list1.size()) {
+            result.add(list1.get(i1));
+            i1++;
+        }
+        while (i2 < list2.size()) {
+            result.add(list2.get(i2));
+            i2++;
+        }
+        return result;
     }
 
     //---------------------------------------------------------------------------------------

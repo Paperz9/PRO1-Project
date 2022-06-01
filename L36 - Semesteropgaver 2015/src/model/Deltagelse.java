@@ -26,9 +26,16 @@ public class Deltagelse {
         return spiller;
     }
 
-    /** Pre: Denne spiller er ikke knyttet til en anden deltagelse. */
+    /** Pre: Denne deltagelse er ikke tilknyttet til en spiller. */
     public void setSpiller(Spiller spiller) {
         this.spiller = spiller;
-        spiller.deltagelse.add(this);
+        spiller.deltagelser.add(this);
+    }
+
+    /** Pre: Denne deltagelse er tilknyttet til en spiller. */
+    public void removeSpiller() {
+        Spiller spiller = this.spiller;
+        this.spiller = null;
+        spiller.deltagelser.remove(this);
     }
 }
