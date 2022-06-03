@@ -1,9 +1,12 @@
 package model;
 
+import java.io.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 public class Kamp implements Comparable<Kamp> {
     private String sted;
@@ -20,12 +23,36 @@ public class Kamp implements Comparable<Kamp> {
         return sted;
     }
 
+    public void setSted(String sted) {
+        this.sted = sted;
+    }
+
+    public void setDato(LocalDate dato) {
+        this.dato = dato;
+    }
+
+    public void setTid(LocalTime tid) {
+        this.tid = tid;
+    }
+
     public LocalDate getDato() {
         return dato;
     }
 
+    public String getDatoFormatted() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        String formatDate = dato.format(formatter);
+        return formatDate;
+    }
+
     public LocalTime getTid() {
         return tid;
+    }
+
+    public String getTidFormatted() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+        String formatTid = tid.format(formatter);
+        return formatTid;
     }
 
     @Override
@@ -95,7 +122,19 @@ public class Kamp implements Comparable<Kamp> {
 
     // S10 (10 p)
 
-    public void spillerHonorar(String tekstFil) {
-
+    public void spillerHonorar(Kamp kamp, String tekstFil) {
+        String fileName = "L36 - Semesteropgaver 2015/src/model/";
+        File newFile = new File(fileName + tekstFil + ".txt");
+        try (PrintWriter printWriter = new PrintWriter(newFile)) {
+            for (Deltagelse d : kamp.deltagelser) {
+                if (!d.isAfbud()) {
+                    printWriter.println(d.getSpiller());
+                }
+            }
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("File not found!");
+            e.printStackTrace();
+        }
     }
 }

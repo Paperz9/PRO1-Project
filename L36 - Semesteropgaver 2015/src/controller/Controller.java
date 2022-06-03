@@ -17,6 +17,16 @@ public abstract class Controller {
         return kamp;
     }
 
+    public static ArrayList<Kamp> getKamp() {
+        return Storage.getKampe();
+    }
+
+    public static void opdaterKamp(Kamp kamp, String sted, LocalDate dato, LocalTime tid) {
+        kamp.setSted(sted);
+        kamp.setDato(dato);
+        kamp.setTid(tid);
+    }
+
     public static Deltagelse opretDeltagelse(Spiller spiller, Kamp kamp, boolean afbud, String begrundelse) {
         Deltagelse deltagelse = kamp.opretDeltagelse(afbud,begrundelse);
         deltagelse.setSpiller(spiller);
@@ -104,5 +114,6 @@ public abstract class Controller {
         opretDeltagelse(ps1,kamp1,false,"");
         opretDeltagelse(ps2,kamp1,false,"");
         opretDeltagelse(ps2,kamp2,false,"");
+
     }
 }
