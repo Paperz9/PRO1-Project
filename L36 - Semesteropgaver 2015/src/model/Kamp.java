@@ -128,7 +128,8 @@ public class Kamp implements Comparable<Kamp> {
         try (PrintWriter printWriter = new PrintWriter(newFile)) {
             for (Deltagelse d : kamp.deltagelser) {
                 if (!d.isAfbud()) {
-                    printWriter.println(d.getSpiller());
+                    printWriter.println(d.getSpiller().getNavn());
+                    printWriter.println("Kamp honorar: " + d.getSpiller().kampHonorar());
                 }
             }
         }
