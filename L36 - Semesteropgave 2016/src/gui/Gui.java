@@ -1,7 +1,9 @@
 package gui;
 
 
+import controller.Controller;
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -41,5 +43,34 @@ public class Gui extends Application {
         Label lblDato = new Label("Dato:");
         pane.add(lblDato, 0, 0);
         pane.add(txfDato, 0, 1);
+
+        // Bane
+        Label lblBane = new Label("Baner");
+        pane.add(lblBane, 0,2);
+        pane.add(lvwBaner, 0,3,3,5);
+        lvwBaner.setPrefHeight(150);
+        lvwBaner.setPrefWidth(200);
+        lvwBaner.getItems().setAll(Controller.getBaner());
+
+        ChangeListener<Bane> listener = (ov, o, n) -> this.selectedBaneChanged();
+        lvwBaner.getSelectionModel().selectedItemProperty().addListener(listener);
+
+        // Ledige tider
+        Label lblTider = new Label("Ledige tider:");
+        pane.add(lblTider,1,0);
+        pane.add(lvwTider, 1,1, 1,5);
+        lvwTider.setPrefHeight(150);
+        lvwTider.setPrefWidth(200);
+    }
+
+
+    //-----------------------------------------------------------------------
+
+    private void selectedBaneChanged() {
+        this.updateControl();
+    }
+
+    private void updateControl() {
+        Bane bane = lvwBaner.getSelectionModel().getSelectedItem();
     }
 }

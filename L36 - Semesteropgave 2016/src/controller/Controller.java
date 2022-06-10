@@ -7,6 +7,7 @@ import storage.Storage;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
 
 // S5 (4 p)
 public class Controller {
@@ -15,6 +16,10 @@ public class Controller {
         Bane bane = new Bane(nummer, baneInfo);
         Storage.storeBane(bane);
         return bane;
+    }
+
+    public static ArrayList<Bane> getBaner() {
+        return Storage.getBaner();
     }
 
     public static Medlem opretMedlem(String navn, String mobil, String mail) {
