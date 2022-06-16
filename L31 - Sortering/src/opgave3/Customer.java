@@ -1,4 +1,4 @@
-package opgave2;
+package opgave3;
 
 public class Customer implements Comparable<Customer>{
     private String firstName;
