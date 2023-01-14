@@ -21,7 +21,7 @@ public class Opg2 {
 
         int i1 = 0;
         int i2 = 0;
-        int j = 0;
+        int counter = 0;
         while (i1 < l1.length && i2 < l2.length) {
             if (l1[i1] < l2[i2]) {
                 i1++;
@@ -30,14 +30,14 @@ public class Opg2 {
                 i2++;
             }
             else {
-                result[j] = l1[i1];
+                result[counter] = l1[i1];
                 i1++;
                 i2++;
-                j++;
+                counter++;
             }
         }
-        int[] resultFitted = new int[j];
-        for (int i = 0; i < j; i++) {
+        int[] resultFitted = new int[counter];
+        for (int i = 0; i < counter; i++) {
             resultFitted[i] = result[i];
         }
         return resultFitted;

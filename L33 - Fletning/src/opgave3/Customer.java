@@ -3,10 +3,12 @@ package opgave3;
 public class Customer implements Comparable<Customer> {
     private String firstName;
     private String lastName;
+    private int age;
 
-    public Customer(String firstName, String lastName) {
+    public Customer(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.age = age;
     }
 
     public String getFirstName() {
@@ -16,19 +18,24 @@ public class Customer implements Comparable<Customer> {
     public String getLastName() {
         return lastName;
     }
+
+    public int getAge() {
+        return age;
+    }
+
     @Override
-    public int compareTo(Customer x) {
-        if(lastName.compareTo(x.getLastName()) < 0){
-            return -1;
-        } else if (lastName.compareTo(x.getLastName()) > 0) {
-            return 1;
+    public int compareTo(Customer c) {
+        int biggest;
+        if(lastName.compareTo(c.getLastName()) == 0){
+            if(firstName.compareTo(c.getFirstName()) == 0){
+                biggest = age - c.getAge();
+            }else{
+                biggest = firstName.compareTo(c.getFirstName());
+            }
+        }else {
+            biggest = lastName.compareTo(c.getLastName());
         }
-        if(firstName.compareTo(x.getFirstName()) < 0){
-            return -1;
-        }else if (firstName.compareTo(x.getFirstName()) > 0) {
-            return 1;
-        }
-        return 0;
+        return biggest;
     }
 
     @Override
