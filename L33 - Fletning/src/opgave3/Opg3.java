@@ -32,14 +32,14 @@ public class Opg3 {
         ArrayList<Customer> goodCustomers = new ArrayList<>();
         int i1 = 0;
         int i2 = 0;
-        while (i1 < l1.size() && i2 < l2.length) {
-            if (l1.get(i1).compareTo(l2[i2]) < 0) {
+        while (i1 < l1.size()) {
+            if (i2 >= l2.length || l1.get(i1).compareTo(l2[i2]) < 0) {
+                goodCustomers.add(l1.get(i1));
                 i1++;
             }
             else if(l1.get(i1).compareTo(l2[i2]) > 0){
                 i2++;
             } else{
-                goodCustomers.add(l1.get(i1));
                 i1++;
                 i2++;
             }
