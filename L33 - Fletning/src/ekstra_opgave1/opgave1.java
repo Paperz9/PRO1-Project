@@ -9,6 +9,7 @@ public class opgave1 {
         String file = "L33 - Fletning/src/ekstra_opgave1/talfil.txt";
         System.out.println(linFileSearch(file,1284));
         System.out.println(linFileSearch(file,100));
+        System.out.println(linFileSearch(file,219));
     }
 
     public static boolean linFileSearch(String fileName, int target) {
