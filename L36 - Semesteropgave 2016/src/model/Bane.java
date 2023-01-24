@@ -27,9 +27,27 @@ public class Bane {
     }
 
     /** Pre: Reservation er ikke tilknyttet til denne bane. */
+//    public void addReservation(Reservation reservation) {
+//        reservations.add(reservation);
+//        reservation.bane = this;
+//    }
+
     public void addReservation(Reservation reservation) {
-        reservations.add(reservation);
-        reservation.bane = this;
+        int low = 0;
+        int high = reservations.size() - 1;
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            int cmp = reservation.compareTo(reservations.get(mid));
+            if (cmp == 0) {
+                reservations.add(mid,reservation);
+                return;
+            } else if (cmp < 0) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+        reservations.add(low,reservation);
     }
 
     /** Pre: Reservation er tilknyttet til denne bane. */
